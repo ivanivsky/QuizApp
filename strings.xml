@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="fight_iq">Muay Thai Trivia</string>
+    <string name="quiz_details">Quiz Details</string>
+    <string name="questions">Questions</string>
+    <string name="enter_country">Enter Country</string>
+    <string name="question_mark_kick">Question Mark Kick</string>
+    <string name="switch_kick">Switch Kick</string>
+    <string name="teep_kick">Teep Kick</string>
+    <string name="head">Head</string>
+    <string name="shins">Shins</string>
+    <string name="hands">Hands</string>
+    <string name="elbows">Elbows</string>
+    <string name="knees">Knees</string>
+    <string name="crushingblows">The Art of Crushing Blows</string>
+    <string name="eightlimbs">The Art of Eight Limbs</string>
+    <string name="mortalcombat">The Art of Mortal Combat</string>
+    <string name="grappling">Thai Grappling</string>
+    <string name="waikru">Wai Kru</string>
+    <string name="wutang">Wu-Tang</string>
+    <string name="thaifu">Thai Fu</string>
+    <string name="mma">MMA</string>
+    <string name="boxing">Western Boxing</string>
+    <string name="jiujitsu">Jiu-Jitsu</string>
+    <string name="rajadamnern">Rajadamnern</string>
+    <string name="thaphae">Thaphae Stadium</string>
+    <string name="lumpinee">Lumpinee Stadium</string>
+
+
+</resources>

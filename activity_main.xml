@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/fight_iq"
+            style="@style/Header" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_details"
+            style="@style/Subheaders" />
+
+        <TextView
+            android:text="The purpose of this quiz is to gauge your knowledge of Muay Thai. All questions pertain to the art of Muay Thai. Please select the appropriate answer for each question. When you're finished hit the Submit button."
+            style="@style/Paragraph" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/questions"
+            style="@style/Subheaders" />
+
+        <TextView
+            android:text="1. Which country did Muay Thai originate?"
+            style="@style/Questions" />
+
+        <EditText
+            android:id="@+id/question_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:hint="@string/enter_country"
+            android:textSize="16sp"
+            android:inputType="text" />
+
+        <TextView
+            android:text="2. Which kick is used to push an opponent away and is used to control range?"
+            style="@style/Questions" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_questionmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/question_mark_kick"
+                android:onClick="onRadioButtonClickedKicks"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_kick"
+                android:onClick="onRadioButtonClickedKicks"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_teep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teep_kick"
+                android:onClick="onRadioButtonClickedKicks"
+                style="@style/Selects"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="3. Which body parts are used to strike the opponent?"
+            style="@style/Questions" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <CheckBox android:id="@+id/checkbox_hands"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hands"
+                android:onClick="checkHands"
+                style="@style/Selects"/>
+            <CheckBox android:id="@+id/checkbox_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/head"
+                android:onClick="checkHead"
+                style="@style/Selects"/>
+            <CheckBox android:id="@+id/checkbox_knees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/knees"
+                android:onClick="checkKnees"
+                style="@style/Selects"/>
+            <CheckBox android:id="@+id/checkbox_elbows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/elbows"
+                android:onClick="checkElbows"
+                style="@style/Selects"/>
+            <CheckBox android:id="@+id/checkbox_shins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shins"
+                android:onClick="checkShins"
+                style="@style/Selects"/>
+        </LinearLayout>
+
+        <TextView
+            android:text="4. Muay Thai is described as the: "
+            style="@style/Questions" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_eightlimbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eightlimbs"
+                android:onClick="onRadioButtonClickedArt"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_mortalcombat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mortalcombat"
+                android:onClick="onRadioButtonClickedArt"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_crushingblows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crushingblows"
+                android:onClick="onRadioButtonClickedArt"
+                style="@style/Selects"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="5. Provide one word to describe the standup grappling element of the sport: "
+            style="@style/Questions" />
+
+        <EditText
+            android:id="@+id/question_grappling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:hint="@string/grappling"
+            android:textSize="16sp"
+            android:inputType="text"/>
+
+        <TextView
+            android:text="6. What is the pre-fight ritual called?"
+            style="@style/Questions" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_thaifu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thaifu"
+                android:onClick="onRadioButtonClickedRitual"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_waikru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waikru"
+                android:onClick="onRadioButtonClickedRitual"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_wutang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wutang"
+                android:onClick="onRadioButtonClickedRitual"
+                style="@style/Selects"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="7. Muay Thai has grown in popularity worldwide because of which sport?"
+            style="@style/Questions" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_mma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mma"
+                android:onClick="onRadioButtonClickedPopularity"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_boxing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boxing"
+                android:onClick="onRadioButtonClickedPopularity"
+                style="@style/Selects"/>
+            <RadioButton android:id="@+id/radio_jiujitsu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jiujitsu"
+                android:onClick="onRadioButtonClickedPopularity"
+                style="@style/Selects" />
+        </RadioGroup>
+
+        <TextView
+            android:text="8. Which of the following are famous Muay Thai stadiums: "
+            style="@style/Questions" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <CheckBox android:id="@+id/checkbox_rajadamnern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rajadamnern"
+                android:onClick="checkRaj"
+                style="@style/Selects"/>
+            <CheckBox android:id="@+id/checkbox_thaphae"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thaphae"
+                android:onClick="checkThaphae"
+                style="@style/Selects"/>
+            <CheckBox android:id="@+id/checkbox_lumpinee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lumpinee"
+                android:onClick="checkLumpinee"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                style="@style/Selects"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="submitAnswers"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</ScrollView>
